@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Portal Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Secure Portal</h1>
+    <nav>
+      <a href="index.html">Student Portal</a>
+      <a href="results.html">View Results</a>
+    </nav>
+  </header>
+  
+  <!-- Login Gate -->
+  <div class="container" id="adminLoginContainer">
+    <h2>Admin Authentication</h2>
+    <p>Enter administrative credentials to manage election candidates and view audit logs.</p>
+    <br>
+    <div class="form-group">
+      <label>Admin Username:</label>
+      <input type="text" id="adminUser" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label>Admin Password:</label>
+      <input type="password" id="adminPass" placeholder="Password">
+    </div>
+    <button id="adminLoginBtn">Login to Admin Panel</button>
+  </div>
+
+  <!-- Dashboard Content (Hidden until login) -->
+  <div class="container" id="adminDashboard" style="display: none;">
+    <h2>Nominate Candidate & Manifesto</h2>
+    <div class="form-group">
+      <label>Candidate Full Name:</label>
+      <input type="text" id="candName" placeholder="e.g. Alex Smith">
+    </div>
+    <div class="form-group">
+      <label>Position:</label>
+      <select id="candPosition">
+        <option value="Class Representative">Class Representative</option>
+        <option value="Student Council Head">Student Council Head</option>
+        <option value="Student President">Student President</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Candidate Manifesto / About Themselves:</label>
+      <textarea id="candManifesto" rows="4" placeholder="Write about achievements, vision, and goals..." style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1; font-family:inherit;"></textarea>
+    </div>
+    <button id="addCandBtn">Add Candidate to Ballot</button>
+
+    <hr>
+
+    <h2>Election Fairness & Security Audit Log</h2>
+    <div id="auditSummary" style="margin-bottom: 15px; font-weight:600; color:#475569;">Loading audit metrics...</div>
+    <div id="auditLogContainer">Loading logs...</div>
+
+    <hr>
+
+    <h2>Manage Active Candidates</h2>
+    <div id="candidateList">Loading list...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
